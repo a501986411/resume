@@ -22,7 +22,7 @@
 
 .login-alone{background-image:url(../images/login-al.jpg); background-size: cover; width: 100%;  }
 .logina-logo{text-align:center; padding:55px 0;}
-.logina-main{position:relative; z-index:5; width:820px; margin:0 auto; background:#fff; border-radius:3px; border:1px solid #c4c4c4;opacity: 0.8;}
+.logina-main{position:relative; z-index:5; width:820px; margin:0 auto; background:#fff; border-radius:3px; border:1px solid #c4c4c4;opacity: 0.95;}
 .logina-main .tab-con{float:left; border-radius:3px; box-shadow:none; border:none; }
 .logina-main .tab-con input{width:230px;}
 .logina-main .tab-con input[type=radio]{width:auto;}

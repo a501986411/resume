@@ -14,6 +14,7 @@ use think\Route;
 Route::get([
 	'/'=>'index/Index/index', //首页
 	'login'=>'index/Index/Login', //登录
+	'register'=>'index/Index/register', //注册
 
 	'addResume/:text' => 'index/Resume/addResume?id=123',
 	'showResume/:resumeId'=>['index/Resume/showResume?id=455',['ext'=>'shtml'],['resumeId'=>'\d{1,4}']],
@@ -21,7 +22,8 @@ Route::get([
 
 //批量注册POST路由
 Route::post([
-
+	'login'=>'index/Index/Login', //登录
+	'register'=>'index/Index/register', //注册
 ]);
 
 //闭包路由
