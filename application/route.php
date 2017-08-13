@@ -16,7 +16,7 @@ Route::get([
 	'login'=>'index/Index/Login', //登录
 	'register'=>'index/Index/register', //注册
 
-	'addResume/:text' => 'index/Resume/addResume?id=123',
+	'resume' => 'index/Resume/index',
 	'showResume/:resumeId'=>['index/Resume/showResume?id=455',['ext'=>'shtml'],['resumeId'=>'\d{1,4}']],
 ]);
 

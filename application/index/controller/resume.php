@@ -13,9 +13,9 @@
 	class Resume
 	{
 
-		public function resume()
+		public function index()
 		{
-			dump(input());die;
+			return view();
 		}
 
 		public function addResume()
