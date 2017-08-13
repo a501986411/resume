@@ -13,18 +13,31 @@
 	use think\Model;
 
 	class Member extends Model
-	{
-		/**
-		 * 根据email获取用户信息
-		 * @access public
-		 * @param $email 邮箱
-		 * @return mixed
-		 * @author knight
-		 */
-		protected $rule = [
-			'__token__' => 'token',
-		];
+	{	const TYPE_MEMBER =1;//会员
+		const SALT_LEN = 9;
+		protected  $insert = ['register_time'];
 		public function getMemberByEmail($email){
 			return $this->where('email',$email)->find();
+		}
+
+		/**
+		 * 设置注册时间
+		 * @return int
+		 */
+		protected function setRegisterTimeAttr()
+		{
+			return time();
+		}
+
+		/**
+		 * 改变最后一次带登录IP
+		 */
+		public function changeLastLoginIp()
+		{
+			$this->last_login_ip = request()->ip();
+			if($this->isUpdate(true)->save()){
+				return true;
+			}
+			return false;
 		}
 	}

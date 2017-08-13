@@ -14,13 +14,30 @@
 /**
  * 两次MD5加密
  * @access public
- * @param $str
+ * @param $str //dai加密字符串
+ * @param $salt 加密附加字符
  * @return string
  * @author knight
  */
 function encrypt($str,$salt)
 {
 	return md5(md5($str).$salt);
+}
+
+/**
+ * 随机获取一个指定长度字符串
+ * @param int $len
+ * @return string
+ */
+function createStr($len=6)
+{
+	$str = '1234567890qwertyuioplkmjnhbgvfcdxszaQWERTYUIOPLKMJNHBGVFCDXSAZ';
+	$retStr = '';
+	for ( $i = 0; $i < $len; $i++ )
+	{
+		$retStr .= $str[ mt_rand(0, strlen($str) - 1) ];
+	}
+	return $retStr;
 }
 /**
  * 数据调试

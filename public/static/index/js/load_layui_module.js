@@ -9,4 +9,5 @@ layui.use([
 ],function(){
     layui_module.elem = layui.element();
     layui_module.layer = layui.layer;
+    layui_module.form = layui.form();
 });

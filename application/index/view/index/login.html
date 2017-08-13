@@ -88,11 +88,28 @@
                content:str,
                success:function(){
                    $('#submit').css("background-color","red !important;");
+                   layui_module.form.verify({
+                       password_again:function(value,item){
+                           if(value != $('#password_reg').val()){
+                               return '两次密码输入不一致';
+                           }
+                       }
+                   });
+                   layui_module.form.on('submit(register)', function(data){
+                       $('#password_reg').val(hex_md5(data.field.password));
+                       $('#password_again').val(hex_md5(data.field.password_again));
+                   });
                }
            });
         });
     });
 
+
+
+    /**
+     *  登录提交事件
+     * @returns {boolean}
+     */
     function onLogin()
     {
         var reg_email = new RegExp("([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])");
