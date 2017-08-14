@@ -1,221 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" href="{$Think.const.UNIT_PATH}/layui/css/layui.css">
     <link rel="stylesheet" href="{$Think.const.STATIC_PATH}/index/css/globe.css">
     <title>简历管理</title>
-
+    <style>
+        td > ul > li{float: left;margin-left: 10px;}
+    </style>
 </head>
 <body>
-<div class="header layui-header header header-doc">
-    <div class="layui-main">
-        <a class="logo" href="/">
-            <img src="{$Think.const.STATIC_PATH}/index/login/passport/images/toplogo.png?v=3.9" alt="">
-        </a>
-        <ul class="layui-nav" lay-filter="">
-            <li class="layui-nav-item layui-this"><a href="">简历管理</a></li>
-        </ul>
-    </div>
-</div>
-<div class="layui-main site-inline">
-    <div class="site-tree">
-        <ul class="layui-tree">
-
-            <li><h2>基础说明</h2></li>
-
-            <li class="site-tree-noicon ">
-                <a href="/doc/"><cite>开始使用</cite></a>
+<div class="page">
+    <div class="fl nav side-nav">
+        <ul class="layui-nav layui-nav-tree layui-nav-side" style="" lay-filter="">
+            <li class="layui-nav-item layui-nav-itemed">
+                <a href="javascript:;">简历管理</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;">简历列表</a></dd>
+                    <dd><a href="javascript:;">历史版本</a></dd>
+                </dl>
             </li>
-            <li class="site-tree-noicon ">
-                <a href="/doc/base/infrastructure.html">
-                    <cite>底层方法</cite>
-                </a>
-            </li>
-            <li class="site-tree-noicon ">
-                <a href="/doc/base/element.html">
-                    <cite>页面元素</cite>
-                    <em>规范 / 公共类/属性</em>
-                </a>
-            </li>
-            <li class="site-tree-noicon ">
-                <a href="/doc/base/modules.html">
-                    <cite>模块规范</cite>
-                    <em>使用 / 扩展</em>
-                </a>
-            </li>
-            <li class="site-tree-noicon ">
-                <a href="/doc/base/faq.html">
-                    <cite>常见问题</cite>
-                </a>
-            </li>
-
-            <li><h2>页面元素</h2></li>
-
-
-
-            <li class="site-tree-noicon ">
-                <a href="/doc/element/color.html">
-                    <cite>颜色</cite>
-                    <em>内置的色值参考</em>
-                </a>
-            </li>
-
-            <li class="site-tree-noicon ">
-                <a href="/doc/element/icon.html">
-                    <cite>图标</cite>
-                    <em>字体图标</em>
-                </a>
-            </li>
-
-            <li class="site-tree-noicon ">
-                <a href="/doc/element/button.html">
-                    <cite>按钮</cite>
-                    <em>button组</em>
-                </a>
-            </li>
-            <li class="site-tree-noicon ">
-                <a href="/doc/element/form.html">
-                    <cite>表单</cite>
-                    <em>form元素集合</em>
-                </a>
-            </li>
-            <li class="site-tree-noicon layui-this">
-                <a href="/doc/element/nav.html">
-                    <cite>导航</cite>
-                    <em>菜单 / 面包屑</em>
-                </a>
-            </li>
-            <li class="site-tree-noicon ">
-                <a href="/doc/element/tab.html">
-                    <cite>选项卡</cite>
-                    <em>Tab切换</em>
-                </a>
-            </li>
-            <li class="site-tree-noicon ">
-                <a href="/doc/element/table.html">
-                    <cite>表格</cite>
-                    <em>table基本结构</em>
-                </a>
-            </li>
-            <li class="site-tree-noicon ">
-                <a href="/doc/element/progress.html">
-                    <cite>进度条</cite>
-                    <em>progress</em>
-                </a>
-            </li>
-            <li class="site-tree-noicon ">
-                <a href="/doc/element/collapse.html">
-                    <cite>面板</cite>
-                    <em>折叠面板 / 手风琴</em>
-                </a>
-            </li>
-            <li class="site-tree-noicon ">
-                <a href="/doc/element/auxiliar.html">
-                    <cite>辅助</cite>
-                    <em>引用 / 字段集 / 横线等</em>
-                </a>
-            </li>
-
-
-            <li><h2>内置模块</h2></li>
-
-            <li>
-                <a href="/doc/modules/layer.html">
-                    <i class="layui-icon" style="top: 3px;"></i><cite>弹出层</cite>
-                    <em>layer</em>
-                </a>
-            </li>
-            <li>
-                <a href="/doc/modules/layim.html">
-                    <i class="layui-icon" style="position: relative; top: 3px;"></i>
-                    <cite>即时通讯</cite>
-                    <em>layim</em>
-                </a>
-            </li>
-            <li>
-                <a href="/doc/modules/laydate.html">
-                    <i class="layui-icon" style="top: 1px;"></i><cite>日期时间选择</cite>
-                    <em>laydate</em>
-                </a>
-            </li>
-            <li>
-                <a href="/doc/modules/laypage.html">
-                    <i class="layui-icon"></i><cite>分页</cite>
-                    <em>laypage</em>
-                </a>
-            </li>
-            <li>
-                <a href="/doc/modules/laytpl.html">
-                    <i class="layui-icon"></i><cite>模板引擎</cite>
-                    <em>laytpl</em>
-                </a>
-            </li>
-            <li>
-                <a href="/doc/modules/element.html">
-                    <i class="layui-icon" style="top: 1px; font-size: 18px;"></i>
-                    <cite>常用元素操作</cite>
-                    <em>element</em>
-                </a>
-            </li>
-            <li>
-                <a href="/doc/modules/form.html">
-                    <i class="layui-icon" style="top: 2px;"></i>
-                    <cite>表单</cite>
-                    <em>form</em>
-                </a>
-            </li>
-            <li>
-                <a href="/doc/modules/layedit.html">
-                    <i class="layui-icon"></i>
-                    <cite>富文本编辑器</cite>
-                    <em>layedit</em>
-                </a>
-            </li>
-            <li>
-                <a href="/doc/modules/upload.html">
-                    <i class="layui-icon"></i>
-                    <cite>文件上传</cite>
-                    <em>upload</em>
-                </a>
-            </li>
-
-            <li>
-                <a href="/doc/modules/tree.html">
-                    <i class="layui-icon"></i>
-                    <cite>树形菜单</cite>
-                    <em>tree</em>
-                </a>
-            </li>
-
-            <li>
-                <a href="/doc/modules/util.html">
-                    <i class="layui-icon"></i>
-                    <cite>工具集</cite>
-                    <em>util</em>
-                </a>
-            </li>
-            <li>
-                <a href="/doc/modules/flow.html">
-                    <i class="layui-icon"></i>
-                    <cite>流加载</cite>
-                    <em>flow</em>
-                </a>
-            </li>
-            <li>
-                <a href="/doc/modules/code.html">
-                    <i class="layui-icon" style="top: 1px;"></i>
-                    <cite>代码修饰器</cite>
-                    <em>code</em>
-                </a>
+            <li class="layui-nav-item layui-nav-itemed">
+                <a href="javascript:;">用户中心</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;">用户信息</a></dd>
+                    <dd><a href="javascript:;">数据统计</a></dd>
+                </dl>
             </li>
         </ul>
     </div>
+    <div class="fl content">
+        <div class="option">
+
+        </div>
+        <table class="layui-table " lay-skin="line" lay-even>
+            <thead>
+            <tr>
+                <th>序号</th>
+                <th>简历名称</th>
+                <th>类型</th>
+                <th>保密类型</th>
+                <th>浏览次数</th>
+                <th>更新时间</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>PHP高级开发工程师</td>
+                <td>全职</td>
+                <td>保密</td>
+                <td>1000</td>
+                <td>2017-08-14</td>
+                <td>启用</td>
+                <td>
+                    <ul>
+                        <li><a><i class="layui-icon">&#xe642;</i></a></li>
+                        <li><a>停用</a></li>
+                        <li><a><i class="layui-icon">&#xe640;</i></a></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>PHP开发</td>
+                <td>兼职</td>
+                <td>公开</td>
+                <td>9</td>
+                <td>2017-08-02</td>
+                <td>停用</td>
+                <td>
+                    <ul>
+                        <li><a><i class="layui-icon">&#xe642;</i></a></li>
+                        <li><a>启用</a></li>
+                        <li><a><i class="layui-icon">&#xe640;</i></a></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>PHP开发</td>
+                <td>兼职</td>
+                <td>公开</td>
+                <td>9</td>
+                <td>2017-08-02</td>
+                <td>停用</td>
+                <td>
+                    <ul>
+                        <li><a><i class="layui-icon">&#xe642;</i></a></li>
+                        <li><a>启用</a></li>
+                        <li><a><i class="layui-icon">&#xe640;</i></a></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>PHP开发</td>
+                <td>兼职</td>
+                <td>公开</td>
+                <td>9</td>
+                <td>2017-08-02</td>
+                <td>停用</td>
+                <td>
+                    <ul>
+                        <li><a><i class="layui-icon">&#xe642;</i></a></li>
+                        <li><a>启用</a></li>
+                        <li><a><i class="layui-icon">&#xe640;</i></a></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>PHP开发</td>
+                <td>兼职</td>
+                <td>公开</td>
+                <td>9</td>
+                <td>2017-08-02</td>
+                <td>停用</td>
+                <td>
+                    <ul>
+                        <li><a><i class="layui-icon">&#xe642;</i></a></li>
+                        <li><a>启用</a></li>
+                        <li><a><i class="layui-icon">&#xe640;</i></a></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>PHP开发</td>
+                <td>兼职</td>
+                <td>公开</td>
+                <td>9</td>
+                <td>2017-08-02</td>
+                <td>停用</td>
+                <td>
+                    <ul>
+                        <li><a><i class="layui-icon">&#xe642;</i></a></li>
+                        <li><a>启用</a></li>
+                        <li><a><i class="layui-icon">&#xe640;</i></a></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>PHP开发</td>
+                <td>兼职</td>
+                <td>公开</td>
+                <td>9</td>
+                <td>2017-08-02</td>
+                <td>停用</td>
+                <td>
+                    <ul>
+                        <li><a><i class="layui-icon">&#xe642;</i></a></li>
+                        <li><a>启用</a></li>
+                        <li><a><i class="layui-icon">&#xe640;</i></a></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>PHP开发</td>
+                <td>兼职</td>
+                <td>公开</td>
+                <td>9</td>
+                <td>2017-08-02</td>
+                <td>停用</td>
+                <td>
+                    <ul>
+                        <li><a><i class="layui-icon">&#xe642;</i></a></li>
+                        <li><a>启用</a></li>
+                        <li><a><i class="layui-icon">&#xe640;</i></a></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>PHP开发</td>
+                <td>兼职</td>
+                <td>公开</td>
+                <td>9</td>
+                <td>2017-08-02</td>
+                <td>停用</td>
+                <td>
+                    <ul>
+                        <li><a><i class="layui-icon">&#xe642;</i></a></li>
+                        <li><a>启用</a></li>
+                        <li><a><i class="layui-icon">&#xe640;</i></a></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>PHP开发</td>
+                <td>兼职</td>
+                <td>公开</td>
+                <td>9</td>
+                <td>2017-08-02</td>
+                <td>停用</td>
+                <td>
+                    <ul>
+                        <li><a><i class="layui-icon">&#xe642;</i></a></li>
+                        <li><a>启用</a></li>
+                        <li><a><i class="layui-icon">&#xe640;</i></a></li>
+                    </ul>
+                </td>
+            </tr><tr>
+                <td>10</td>
+                <td>PHP开发</td>
+                <td>兼职</td>
+                <td>公开</td>
+                <td>9</td>
+                <td>2017-08-02</td>
+                <td>停用</td>
+                <td>
+                    <ul>
+                        <li><a><i class="layui-icon">&#xe642;</i></a></li>
+                        <li><a>启用</a></li>
+                        <li><a><i class="layui-icon">&#xe640;</i></a></li>
+                    </ul>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div id="page" style="float: right;"></div>
+    </div>
+    <div class="footer">
+        <ul>
+            <li><a>关于</a></li>
+            <li><a>简介</a></li>
+            <li><a>联系</a></li>
+        </ul>
+    </div>
 </div>
+
+
+
 </body>
 <script src="{$Think.const.STATIC_PATH}/index/js/jquery-1.9.1.min.js"></script>
 <script src="{$Think.const.UNIT_PATH}/layui/layui.js"></script>
 <script src="{$Think.const.STATIC_PATH}/index/js/load_layui_module.js"></script>
 <script src="{$Think.const.STATIC_PATH}/index/js/md5.js"></script>
 <script src="{$Think.const.UNIT_PATH}/vue.min.js"></script>
+<script>
+    $(function () {
+        layui.use([
+            'laypage',
+        ],function(){
+            var page = layui.laypage;
+            page({
+                cont:'page',
+                pages:100,
+                groups:5
+            });
+        });
+    });
+</script>
 </html>
