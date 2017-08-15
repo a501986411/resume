@@ -18,9 +18,9 @@
 			return view();
 		}
 
-		public function addResume()
+		public function create()
 		{
-			dump(input());
+			return view();
 		}
 
 		public function showResume()

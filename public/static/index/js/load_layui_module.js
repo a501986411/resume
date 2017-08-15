@@ -5,13 +5,12 @@ var layui_module = {};
 layui.use([
     'form',
     'element',
-    'laypage',
     'layer',
-
+    'laydate',
 ],function(){
     layui_module.elem = layui.element;
     layui_module.layer = layui.layer;
     layui_module.form = layui.form;
-    layui_module.page =  layui.laypage;
+    layui_module.laydate =  layui.laydate();
 });
 

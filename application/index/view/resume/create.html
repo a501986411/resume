@@ -1,0 +1,110 @@
+{layout name="layout" /}
+<div class="layui-collapse">
+    <div class="layui-colla-item">
+        <h2 class="layui-colla-title">基础信息</h2>
+        <div class="layui-colla-content layui-show">
+            <form class="layui-form" action="">
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">姓名:</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="price_min" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">性别:</label>
+                        <div class="layui-input-inline" style="width: 100px;">
+                            <select name="sex" lay-verify="">
+                                <option value="">请选择</option>
+                                <option value="010">男</option>
+                                <option value="021">女</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">年龄:</label>
+                        <div class="layui-input-inline" style="width: 50px;">
+                            <input type="text" name="price_min" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">出生年月:</label>
+                        <div class="layui-input-inline">
+                            <input class="layui-input" placeholder="选择出生年月" onclick="layui.laydate({elem: this, istime: true, format: 'YYYY-MM-DD'})">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">工作年限:</label>
+                        <div class="layui-input-inline" style="width: 100px;">
+                            <select name="sex" lay-verify="">
+                                <option value="">请选择</option>
+                                <option value="010">无经验</option>
+                                <option value="021">应届生</option>
+                                <option value="021">1年以下</option>
+                                <option value="021">1-2年</option>
+                                <option value="021">3-5年</option>
+                                <option value="021">6-10年</option>
+                                <option value="021">10年以上</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">最高学历:</label>
+                        <div class="layui-input-inline" style="width: 100px;">
+                            <select name="sex" lay-verify="">
+                                <option value="">请选择</option>
+                                <option value="010">高中以下</option>
+                                <option value="021">高中</option>
+                                <option value="021">中专/技校</option>
+                                <option value="021">大专</option>
+                                <option value="021">本科</option>
+                                <option value="021">硕士</option>
+                                <option value="021">博士</option>
+                                <option value="021">MBA/EMBA</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">意向职位:</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="price_min" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">期望薪资:</label>
+                        <div class="layui-input-inline">
+                            <select name="sex" lay-verify="">
+                                <option value="">请选择</option>
+                                <option value="010">1000元以下</option>
+                                <option value="021">1000-2000元</option>
+                                <option value="021">2000-3000元</option>
+                                <option value="021">3000-5000元</option>
+                                <option value="021">5000-8000元</option>
+                                <option value="021">8000-12000元</option>
+                                <option value="021">12000-20000元</option>
+                                <option value="021">20000-25000元</option>
+                                <option value="021">25000元以上</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="layui-colla-item">
+        <h2 class="layui-colla-title">工作经验</h2>
+        <div class="layui-colla-content layui-show">
+            工作经验
+        </div>
+    </div>
+    <div class="layui-colla-item">
+        <h2 class="layui-colla-title">项目经验</h2>
+        <div class="layui-colla-content layui-show">内容区项目经验域</div>
+    </div>
+    <div class="layui-colla-item">
+        <h2 class="layui-colla-title">教育经历</h2>
+        <div class="layui-colla-content layui-show">教育经历</div>
+    </div>
+</div>

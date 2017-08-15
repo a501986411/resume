@@ -1,39 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-    <link rel="stylesheet" href="{$Think.const.UNIT_PATH}/layui/css/layui.css">
-    <link rel="stylesheet" href="{$Think.const.STATIC_PATH}/index/css/globe.css">
-    <title>简历管理</title>
-    <style>
-        td > ul > li{float: left;margin-left: 10px;}
-    </style>
-</head>
-<body>
-<div class="page">
-    <div class="fl nav side-nav">
-        <ul class="layui-nav layui-nav-tree layui-nav-side" style="" lay-filter="">
-            <li class="layui-nav-item layui-nav-itemed">
-                <a href="javascript:;">简历管理</a>
-                <dl class="layui-nav-child">
-                    <dd><a href="javascript:;">简历列表</a></dd>
-                    <dd><a href="javascript:;">历史版本</a></dd>
-                </dl>
-            </li>
-            <li class="layui-nav-item layui-nav-itemed">
-                <a href="javascript:;">用户中心</a>
-                <dl class="layui-nav-child">
-                    <dd><a href="javascript:;">用户信息</a></dd>
-                    <dd><a href="javascript:;">数据统计</a></dd>
-                </dl>
-            </li>
-        </ul>
-    </div>
-    <div class="fl content">
-        <div class="option">
-
-        </div>
-        <table class="layui-table " lay-skin="line" lay-even>
+{layout name="layout" /}
+<table class="layui-table " lay-skin="line" lay-even style="margin-top: 2px;">
             <thead>
             <tr>
                 <th>序号</th>
@@ -58,8 +24,8 @@
                 <td>
                     <ul>
                         <li><a><i class="layui-icon">&#xe642;</i></a></li>
-                        <li><a>停用</a></li>
                         <li><a><i class="layui-icon">&#xe640;</i></a></li>
+                        <li><a>停用</a></li>
                     </ul>
                 </td>
             </tr>
@@ -74,8 +40,8 @@
                 <td>
                     <ul>
                         <li><a><i class="layui-icon">&#xe642;</i></a></li>
-                        <li><a>启用</a></li>
                         <li><a><i class="layui-icon">&#xe640;</i></a></li>
+                        <li><a>启用</a></li>
                     </ul>
                 </td>
             </tr>
@@ -90,8 +56,8 @@
                 <td>
                     <ul>
                         <li><a><i class="layui-icon">&#xe642;</i></a></li>
-                        <li><a>启用</a></li>
                         <li><a><i class="layui-icon">&#xe640;</i></a></li>
+                        <li><a>启用</a></li>
                     </ul>
                 </td>
             </tr>
@@ -106,8 +72,8 @@
                 <td>
                     <ul>
                         <li><a><i class="layui-icon">&#xe642;</i></a></li>
-                        <li><a>启用</a></li>
                         <li><a><i class="layui-icon">&#xe640;</i></a></li>
+                        <li><a>启用</a></li>
                     </ul>
                 </td>
             </tr>
@@ -122,8 +88,8 @@
                 <td>
                     <ul>
                         <li><a><i class="layui-icon">&#xe642;</i></a></li>
-                        <li><a>启用</a></li>
                         <li><a><i class="layui-icon">&#xe640;</i></a></li>
+                        <li><a>启用</a></li>
                     </ul>
                 </td>
             </tr>
@@ -138,8 +104,8 @@
                 <td>
                     <ul>
                         <li><a><i class="layui-icon">&#xe642;</i></a></li>
-                        <li><a>启用</a></li>
                         <li><a><i class="layui-icon">&#xe640;</i></a></li>
+                        <li><a>启用</a></li>
                     </ul>
                 </td>
             </tr>
@@ -154,8 +120,8 @@
                 <td>
                     <ul>
                         <li><a><i class="layui-icon">&#xe642;</i></a></li>
-                        <li><a>启用</a></li>
                         <li><a><i class="layui-icon">&#xe640;</i></a></li>
+                        <li><a>启用</a></li>
                     </ul>
                 </td>
             </tr>
@@ -170,24 +136,8 @@
                 <td>
                     <ul>
                         <li><a><i class="layui-icon">&#xe642;</i></a></li>
-                        <li><a>启用</a></li>
                         <li><a><i class="layui-icon">&#xe640;</i></a></li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td>10</td>
-                <td>PHP开发</td>
-                <td>兼职</td>
-                <td>公开</td>
-                <td>9</td>
-                <td>2017-08-02</td>
-                <td>停用</td>
-                <td>
-                    <ul>
-                        <li><a><i class="layui-icon">&#xe642;</i></a></li>
                         <li><a>启用</a></li>
-                        <li><a><i class="layui-icon">&#xe640;</i></a></li>
                     </ul>
                 </td>
             </tr>
@@ -202,8 +152,24 @@
                 <td>
                     <ul>
                         <li><a><i class="layui-icon">&#xe642;</i></a></li>
-                        <li><a>启用</a></li>
                         <li><a><i class="layui-icon">&#xe640;</i></a></li>
+                        <li><a>启用</a></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>PHP开发</td>
+                <td>兼职</td>
+                <td>公开</td>
+                <td>9</td>
+                <td>2017-08-02</td>
+                <td>停用</td>
+                <td>
+                    <ul>
+                        <li><a><i class="layui-icon">&#xe642;</i></a></li>
+                        <li><a><i class="layui-icon">&#xe640;</i></a></li>
+                        <li><a>启用</a></li>
                     </ul>
                 </td>
             </tr><tr>
@@ -217,32 +183,14 @@
                 <td>
                     <ul>
                         <li><a><i class="layui-icon">&#xe642;</i></a></li>
-                        <li><a>启用</a></li>
                         <li><a><i class="layui-icon">&#xe640;</i></a></li>
+                        <li><a>启用</a></li>
                     </ul>
                 </td>
             </tr>
             </tbody>
         </table>
-        <div id="page" style="float: right;"></div>
-    </div>
-    <div class="footer">
-        <ul>
-            <li><a>关于</a></li>
-            <li><a>简介</a></li>
-            <li><a>联系</a></li>
-        </ul>
-    </div>
-</div>
 
-
-
-</body>
-<script src="{$Think.const.STATIC_PATH}/index/js/jquery-1.9.1.min.js"></script>
-<script src="{$Think.const.UNIT_PATH}/layui/layui.js"></script>
-<script src="{$Think.const.STATIC_PATH}/index/js/load_layui_module.js"></script>
-<script src="{$Think.const.STATIC_PATH}/index/js/md5.js"></script>
-<script src="{$Think.const.UNIT_PATH}/vue.min.js"></script>
 <script>
     $(function () {
         layui.use([

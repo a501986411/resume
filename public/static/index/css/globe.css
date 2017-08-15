@@ -1,7 +1,7 @@
 .page {height: 1000px;}
 .fl{float: left}
 .side-nav{height: 1000px;width:200px;}
-.content{height: 1000px;width: 85%;}
+.content{height: 1000px;width: 85%;margin-left: 2px;margin-top: 2px;}
 .footer {
     position:fixed;
     z-index: 1000;

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="{$Think.const.UNIT_PATH}/layui/css/layui.css">
+    <link rel="stylesheet" href="{$Think.const.STATIC_PATH}/index/css/globe.css">
+    <title>简历管理</title>
+    <style>
+        td > ul > li{float: left;margin-left: 10px;}
+    </style>
+</head>
+<script src="{$Think.const.STATIC_PATH}/index/js/jquery-1.9.1.min.js"></script>
+<script src="{$Think.const.UNIT_PATH}/layui/layui.js"></script>
+<script src="{$Think.const.STATIC_PATH}/index/js/load_layui_module.js"></script>
+<script src="{$Think.const.STATIC_PATH}/index/js/md5.js"></script>
+<script src="{$Think.const.UNIT_PATH}/vue.min.js"></script>
+<body>
+<div class="page">
+    <div class="fl nav side-nav">
+        <ul class="layui-nav layui-nav-tree layui-nav-side" style="" lay-filter="">
+            <li class="layui-nav-item layui-nav-itemed">
+                <a href="javascript:;">简历管理</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="create">创建简历</a></dd>
+                    <dd><a href="resume">简历列表</a></dd>
+                    <dd><a href="javascript:;">历史版本</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item layui-nav-itemed">
+                <a href="javascript:;">用户中心</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;">用户信息</a></dd>
+                    <dd><a href="javascript:;">数据统计</a></dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+    <div class="fl content">
+        {__CONTENT__}
+        <div id="page" style="float: right;"></div>
+    </div>
+    <div class="footer">
+        <ul>
+            <li><a>关于</a></li>
+            <li><a>简介</a></li>
+            <li><a>联系</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+<script>
+    $(function(){
+        var url = window.location.href.replace(window.location.protocol+'//'+window.location.host+'/','');
+        $('.side-nav').find("[href='"+url+"']").parent('dd').addClass('layui-this');
+    });
+</script>
+</html>
