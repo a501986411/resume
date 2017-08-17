@@ -91,52 +91,29 @@
                         </div>
                     </div>
                 </div>
-                <div class="layui-colla-item">
+                <div class="layui-colla-item" >
                     <h2 class="layui-colla-title">工作经验</h2>
-                    <div class="layui-colla-content layui-show">
-                        <div style="width: 450px;border: dashed 2px #e2e2e2;" id="work">
-                            <div style="margin-top: 10px;float: right;">
-                                <i class="layui-icon" style="font-size: 30px;">&#xe608;</i>
-                                <i class="layui-icon" style="font-size: 30px;">&#xe640;</i>
-                            </div>
-                            <div class="layui-form-item">
-                                <label class="layui-form-label">公司名称:</label>
-                                <div class="layui-input-block" style="width: 300px;">
-                                    <input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
-                                </div>
-                            </div>
-                            <div class="layui-form-item">
-                                <div class="layui-inline">
-                                    <label class="layui-form-label">工作时间:</label>
-                                    <div class="layui-input-inline" style="width: 145px;">
-                                        <input class="layui-input" placeholder="开始日期" id="LAY_demorange_s" onclick="layui.laydate({elem: this, istime: true, format: 'YYYY-MM-DD'})">
-                                    </div>
-                                    <div class="layui-input-inline" style="width: 145px;">
-                                        <input class="layui-input" placeholder="结束日期" id="LAY_demorange_e" onclick="layui.laydate({elem: this, istime: true, format: 'YYYY-MM-DD'})">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="layui-form-item">
-                                <label class="layui-form-label">薪资:</label>
-                                <div class="layui-input-block" style="width: 300px">
-                                    <input type="text" name="title" required  lay-verify="required" placeholder="￥" autocomplete="off" class="layui-input">
-                                </div>
-                            </div>
-                            <div class="layui-form-item">
-                                <label class="layui-form-label">职位:</label>
-                                <div class="layui-input-block"  style="width: 300px">
-                                    <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                                </div>
-                            </div>
-                            <div class="layui-form-item">
-                                <label class="layui-form-label">工作内容:</label>
-                                <div class="layui-input-block" style="width: 300px" >
-                                    <textarea name="desc" placeholder="请输入内容" class="layui-textarea" style="resize:none;"></textarea>
-                                </div>
-                            </div>
-
-                        </div>
-
+                    <div class="layui-colla-contentW layui-show" >
+                        <table class="layui-table " lay-skin="line" lay-even style="margin:2px;" id="work-tb">
+                            <thead>
+                             <tr style="background-color:rgba(255, 255, 255, 1);">
+                                 <th>公司名称</th>
+                                 <th>工作时间</th>
+                                 <th>薪资(￥)</th>
+                                 <th>职位</th>
+                                 <th>工作内容</th>
+                                 <th>操作<a href="javascript:void(0);"><i id="add-work" title="添加工作经验" class="layui-icon" style="font-size: 18px;margin-left: 25px;">&#xe654;</i></a></th>
+                             </tr>
+                            </thead>
+                            <tr v-for="item in items">
+                                <td>{{item.company_name}}</td>
+                                <td>{{item.work_time}}</td>
+                                <td>{{item.xz}}</td>
+                                <td>{{item.work}}</td>
+                                <td>{{item.content}}</td>
+                                <td><i class="layui-icon" style="font-size: 30px;" >&#xe640;</i></td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
                 <div class="layui-colla-item">
@@ -158,4 +135,33 @@
             </form>
     </div>
 </div>
+<script>
+    var workTb = new Vue({
+        el:"#work-tb",
+        data:{
+            items:[
+                {company_name:'成都金万泰科技有限公司',work_time:'2015/03/15-2017/8/17','xz':'3000',work:'PHP工程师',content:'saas系统研发'},
+                {company_name:'成都金万泰科技有限公司',work_time:'2015/03/15-2017/8/17','xz':'3000',work:'PHP工程师',content:'saas系统研发'},
+                {company_name:'成都金万泰科技有限公司',work_time:'2015/03/15-2017/8/17','xz':'3000',work:'PHP工程师',content:'saas系统研发'},
+            ],
+        },
+    });
+
+    $(function(){
+        $('#add-work').click(function(){
+            alert(123);
+            $.get('addWork',{},function(str){
+                layui_module.layer.open({
+                    skin: 'layui-layer-molv',
+                    area: ['500px'],
+                    title:'注册用户',
+                    type:1,
+                    content:str,
+                    success:function(){
+                    }
+                });
+            });
+        });
+    });
+</script>
 
